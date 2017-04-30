@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" id="Q3T-yf-l2J">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rHw-Ew-NDc">
                             <connections>
-                                <segue destination="OSy-GC-xgw" kind="show" id="txK-Sk-x1u"/>
+                                <segue destination="OSy-GC-xgw" kind="show" identifier="gameSegue" id="txK-Sk-x1u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,14 +102,24 @@
                                     <action selector="addTapped:" destination="OSy-GC-xgw" eventType="touchUpInside" id="760-N0-99g"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmc-Ag-FXP">
+                                <rect key="frame" x="165" y="502" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="OSy-GC-xgw" eventType="touchUpInside" id="5NO-Xl-PVb"/>
+                                    <action selector="deleteTapped:" destination="OSy-GC-xgw" eventType="touchUpInside" id="NmB-L5-Pue"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yY3-wf-YWO" firstAttribute="centerX" secondItem="GZF-gK-CqE" secondAttribute="centerX" id="1aU-NK-4hR"/>
                             <constraint firstItem="KRT-7H-5kd" firstAttribute="centerX" secondItem="GZF-gK-CqE" secondAttribute="centerX" id="IPW-6W-Nia"/>
+                            <constraint firstItem="Jmc-Ag-FXP" firstAttribute="top" secondItem="KRT-7H-5kd" secondAttribute="bottom" constant="8" id="PNB-Nw-1XL"/>
                             <constraint firstItem="yY3-wf-YWO" firstAttribute="width" secondItem="qKq-fb-fA8" secondAttribute="width" id="V3K-g3-KZO"/>
                             <constraint firstItem="KRT-7H-5kd" firstAttribute="top" secondItem="yY3-wf-YWO" secondAttribute="bottom" constant="20" id="dem-yS-B7c"/>
                             <constraint firstItem="yY3-wf-YWO" firstAttribute="top" secondItem="qKq-fb-fA8" secondAttribute="bottom" constant="50" id="gsC-Uw-3IW"/>
+                            <constraint firstItem="Jmc-Ag-FXP" firstAttribute="centerX" secondItem="GZF-gK-CqE" secondAttribute="centerX" id="ueW-ef-kkj"/>
                             <constraint firstItem="qKq-fb-fA8" firstAttribute="top" secondItem="pp9-8O-w7k" secondAttribute="bottom" constant="20" id="w6E-yH-zQv"/>
                             <constraint firstItem="qKq-fb-fA8" firstAttribute="centerX" secondItem="GZF-gK-CqE" secondAttribute="centerX" id="xkv-sM-vyx"/>
                         </constraints>
@@ -131,13 +141,15 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addupdatebutton" destination="KRT-7H-5kd" id="bdd-ok-n8o"/>
+                        <outlet property="deleteButton" destination="Jmc-Ag-FXP" id="O2c-Bo-eKp"/>
                         <outlet property="imageView" destination="qKq-fb-fA8" id="F8i-Oj-2Vx"/>
                         <outlet property="titleTextField" destination="yY3-wf-YWO" id="CD3-0u-qK9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgK-SX-PNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="1273"/>
+            <point key="canvasLocation" x="1860" y="1272.4137931034484"/>
         </scene>
     </scenes>
     <resources>
